@@ -1,0 +1,961 @@
+/* =================================================
+   LOCATION PAGE
+================================================= */
+
+.location-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 60px 25px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    isolation: isolate;
+
+    color: #ffffff;
+}
+
+
+/* =================================================
+   FULL PAGE BACKGROUND
+================================================= */
+
+.location-page::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 8, 18, 0.62),
+            rgba(5, 8, 18, 0.78)
+        ),
+        url("/images/location.jpg");
+
+    background-size: cover;
+
+    background-position: center top;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =================================================
+   BACKGROUND OVERLAY
+================================================= */
+
+.location-page::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(229, 9, 20, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(37, 99, 235, 0.12),
+            transparent 35%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =================================================
+   KEEP CONTENT ABOVE BACKGROUND
+================================================= */
+
+.location-page > * {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =================================================
+   LOCATION HEADER
+================================================= */
+
+.location-header {
+    width: 100%;
+
+    max-width: 1000px;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+/* =================================================
+   LOCATION ICON
+================================================= */
+
+.location-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #b20710
+        );
+
+    font-size: 36px;
+
+    box-shadow:
+        0 12px 30px rgba(229, 9, 20, 0.35);
+}
+
+
+/* =================================================
+   HEADING
+================================================= */
+
+.location-header h1 {
+    margin: 0 0 12px;
+
+    font-size: 40px;
+
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+
+.location-header p {
+    margin: 0;
+
+    color: #e2e8f0;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* =================================================
+   SELECTED MOVIE
+================================================= */
+
+.selected-movie {
+    width: fit-content;
+
+    max-width: 90%;
+
+    margin: 25px auto 0;
+
+    padding: 13px 22px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    border-radius: 30px;
+
+    background:
+        rgba(15, 23, 42, 0.70);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(10px);
+
+    color: #e2e8f0;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+.selected-movie span {
+    color: #cbd5e1;
+}
+
+
+.selected-movie strong {
+    color: #ffffff;
+}
+
+
+/* =================================================
+   SELECTED LOCATION
+================================================= */
+
+.selected-location {
+    width: fit-content;
+
+    margin: 18px auto 0;
+
+    padding: 8px 16px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(15, 23, 42, 0.70);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.16);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =================================================
+   LOCATION OPTIONS
+================================================= */
+
+.location-options {
+    width: 100%;
+
+    max-width: 650px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin: 0 auto;
+
+    padding: 0;
+}
+
+
+/* =================================================
+   LOCATION ITEM
+================================================= */
+
+.location-item {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =================================================
+   LOCATION OPTION BOX
+================================================= */
+
+.location-option {
+    width: 100%;
+
+    max-width: 500px;
+
+    min-height: 64px;
+
+    padding: 12px 20px;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 16px;
+
+    background:
+        rgba(15, 23, 42, 0.68);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =================================================
+   CITY ICON
+================================================= */
+
+.location-option-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    font-size: 22px;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =================================================
+   CITY NAME
+================================================= */
+
+.location-option-name {
+    flex: 1;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #ffffff;
+}
+
+
+/* =================================================
+   ARROW
+================================================= */
+
+.location-option::after {
+    content: "→";
+
+    flex-shrink: 0;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    color: #e50914;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* =================================================
+   HOVER
+================================================= */
+
+.location-option:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #b20710
+        );
+
+    border-color:
+        rgba(229, 9, 20, 0.70);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 14px 30px rgba(229, 9, 20, 0.30);
+}
+
+
+.location-option:hover::after {
+    color: #ffffff;
+
+    transform:
+        translateX(6px);
+}
+
+
+.location-option:hover
+.location-option-icon {
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =================================================
+   LOCATION SEPARATOR
+================================================= */
+
+.location-separator {
+    display: none;
+}
+
+
+/* =================================================
+   LOCATION BACK
+================================================= */
+
+.location-back {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.location-back button {
+    padding: 10px 20px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 22px;
+
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    color: #cbd5e1;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.location-back button:hover {
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    color: #ffffff;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =================================================
+   LOCATION MESSAGE
+================================================= */
+
+.location-message {
+    width: 100%;
+
+    max-width: 600px;
+
+    padding: 45px 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        rgba(15, 23, 42, 0.88);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.50);
+
+    backdrop-filter: blur(14px);
+
+    margin: auto;
+}
+
+
+/* =================================================
+   MESSAGE ICON
+================================================= */
+
+.location-message-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(229, 9, 20, 0.15);
+
+    border:
+        1px solid rgba(229, 9, 20, 0.30);
+
+    font-size: 35px;
+}
+
+
+/* =================================================
+   MESSAGE HEADING
+================================================= */
+
+.location-message h2 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: 27px;
+
+    font-weight: 800;
+
+    word-break: break-word;
+}
+
+
+/* =================================================
+   MESSAGE TEXT
+================================================= */
+
+.location-message p {
+    margin: 0 0 25px;
+
+    color: #94a3b8;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+.location-message strong {
+    color: #ffffff;
+}
+
+
+/* =================================================
+   MESSAGE BUTTON
+================================================= */
+
+.location-message button {
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #b20710
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+    box-shadow:
+        0 8px 20px rgba(229, 9, 20, 0.25);
+}
+
+
+.location-message button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #b20710,
+            #8f050c
+        );
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(229, 9, 20, 0.35);
+}
+
+
+/* =================================================
+   LOADING SPINNER
+================================================= */
+
+.location-spinner {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 22px;
+
+    border:
+        5px solid #334155;
+
+    border-top:
+        5px solid #e50914;
+
+    border-radius: 50%;
+
+    animation:
+        locationSpin 0.8s linear infinite;
+}
+
+
+@keyframes locationSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =================================================
+   TABLET
+================================================= */
+
+@media (max-width: 900px) {
+
+    .location-page {
+        padding: 50px 20px;
+    }
+
+
+    .location-header h1 {
+        font-size: 35px;
+    }
+
+
+    .location-option {
+        max-width: 450px;
+
+        font-size: 17px;
+    }
+
+}
+
+
+/* =================================================
+   MOBILE
+================================================= */
+
+@media (max-width: 768px) {
+
+    .location-page {
+        padding: 40px 15px;
+    }
+
+
+    .location-header {
+        margin-bottom: 30px;
+    }
+
+
+    .location-icon {
+        width: 65px;
+        height: 65px;
+
+        font-size: 30px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .location-header h1 {
+        font-size: 30px;
+    }
+
+
+    .location-header p {
+        font-size: 15px;
+    }
+
+
+    .selected-movie {
+        padding: 11px 17px;
+
+        font-size: 14px;
+    }
+
+
+    .selected-location {
+        font-size: 14px;
+
+        padding: 7px 14px;
+    }
+
+
+    .location-options {
+        gap: 12px;
+
+        width: 100%;
+    }
+
+
+    .location-option {
+        width: 92%;
+
+        max-width: 420px;
+
+        min-height: 58px;
+
+        padding: 10px 15px;
+
+        font-size: 16px;
+
+        border-radius: 14px;
+    }
+
+
+    .location-option-icon {
+        width: 35px;
+        height: 35px;
+
+        font-size: 19px;
+    }
+
+
+    .location-option::after {
+        font-size: 23px;
+    }
+
+
+    .location-message {
+        padding: 35px 22px;
+
+        border-radius: 20px;
+    }
+
+
+    .location-message h2 {
+        font-size: 23px;
+    }
+
+
+    .location-message p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =================================================
+   SMALL MOBILE
+================================================= */
+
+@media (max-width: 480px) {
+
+    .location-page {
+        padding: 30px 10px;
+    }
+
+
+    .location-icon {
+        width: 58px;
+        height: 58px;
+
+        font-size: 27px;
+    }
+
+
+    .location-header h1 {
+        font-size: 26px;
+    }
+
+
+    .location-header p {
+        font-size: 14px;
+    }
+
+
+    .selected-movie {
+        max-width: 100%;
+
+        font-size: 13px;
+
+        padding: 10px 14px;
+    }
+
+
+    .selected-location {
+        font-size: 13px;
+    }
+
+
+    .location-options {
+        gap: 10px;
+    }
+
+
+    .location-option {
+        width: 94%;
+
+        min-height: 54px;
+
+        padding: 9px 12px;
+
+        font-size: 15px;
+
+        gap: 10px;
+    }
+
+
+    .location-option-icon {
+        width: 32px;
+        height: 32px;
+
+        font-size: 17px;
+    }
+
+
+    .location-option::after {
+        font-size: 21px;
+    }
+
+
+    .location-message {
+        padding: 30px 18px;
+    }
+
+
+    .location-message-icon {
+        width: 65px;
+        height: 65px;
+
+        font-size: 30px;
+    }
+
+
+    .location-message h2 {
+        font-size: 21px;
+    }
+
+
+    .location-message button {
+        width: 100%;
+
+        padding: 13px 18px;
+    }
+
+}
+
+
+/* =================================================
+   VERY SMALL DEVICES
+================================================= */
+
+@media (max-width: 350px) {
+
+    .location-page {
+        padding-left: 8px;
+
+        padding-right: 8px;
+    }
+
+
+    .location-option {
+        width: 96%;
+
+        font-size: 14px;
+
+        padding:
+            8px 10px;
+    }
+
+
+    .location-option-icon {
+        width: 30px;
+        height: 30px;
+
+        font-size: 16px;
+    }
+
+
+    .location-option::after {
+        font-size: 19px;
+    }
+
+}

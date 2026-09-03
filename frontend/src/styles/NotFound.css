@@ -1,0 +1,242 @@
+/* ================================
+   NOT FOUND PAGE
+================================ */
+
+.notfound-page {
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(229, 9, 20, 0.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(37, 99, 235, 0.16),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #080b14,
+            #111827,
+            #1f2937
+        );
+}
+
+
+/* ================================
+   NOT FOUND CARD
+================================ */
+
+.notfound-card {
+    width: 420px;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    padding: 45px 35px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.45);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    animation:
+        fadeIn 0.5s ease;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.notfound-card h1 {
+    color: #e50914;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================================
+   404
+================================ */
+
+.notfound-card h2 {
+    font-size: 90px;
+
+    margin: 20px 0;
+
+    color: #e50914;
+
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+/* ================================
+   SUBTITLE
+================================ */
+
+.notfound-card h3 {
+    font-size: 26px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.notfound-card p {
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.notfound-card button {
+    padding: 14px 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #b20710
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.notfound-card button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #b20710,
+            #8f050c
+        );
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 8px 20px rgba(229, 9, 20, 0.30);
+}
+
+
+/* ================================
+   ANIMATION
+================================ */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+    .notfound-page {
+        padding: 30px 15px;
+    }
+
+
+    .notfound-card {
+        padding: 35px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .notfound-card h1 {
+        font-size: 27px;
+    }
+
+
+    .notfound-card h2 {
+        font-size: 70px;
+    }
+
+
+    .notfound-card h3 {
+        font-size: 22px;
+    }
+
+
+    .notfound-card p {
+        font-size: 14px;
+    }
+
+
+    .notfound-card button {
+        width: 100%;
+
+        padding: 13px 20px;
+    }
+}

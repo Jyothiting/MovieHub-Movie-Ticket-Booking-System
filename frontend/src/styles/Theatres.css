@@ -1,0 +1,878 @@
+/* =========================================================
+   MOVIEHUB - THEATRES PAGE
+   Cinema Background
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.theatre-page {
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 40px 20px 60px;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    isolation: isolate;
+
+    color: #ffffff;
+
+    /*
+       IMPORTANT:
+       The background is placed using ::before so it covers
+       the complete Theatre page height.
+    */
+}
+
+
+/* =========================================================
+   FULL PAGE BACKGROUND
+========================================================= */
+
+.theatre-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 8, 18, 0.55),
+            rgba(5, 8, 18, 0.65)
+        ),
+        url("/src/background/theatres-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center top;
+
+    background-repeat: no-repeat;
+
+    /*
+       Do NOT use fixed here.
+       It can cause background rendering problems
+       when the page becomes taller than the viewport.
+    */
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.theatre-header {
+
+    max-width: 700px;
+
+    margin: 0 auto 30px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        rgba(15, 23, 42, 0.82);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.45);
+}
+
+
+.theatre-header-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 8px;
+}
+
+
+.theatre-header h1 {
+
+    margin: 0;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.theatre-header p {
+
+    margin: 10px 0 20px;
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+}
+
+
+.selected-city {
+
+    display: inline-block;
+
+    margin: 5px;
+
+    padding: 10px 18px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 25px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SELECTED MOVIE
+========================================================= */
+
+.selected-movie {
+
+    max-width: 900px;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 22px;
+
+    background:
+        rgba(15, 23, 42, 0.86);
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.4);
+}
+
+
+.theatre-movie-image {
+
+    width: 120px;
+
+    height: 170px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.55);
+}
+
+
+.no-theatre-image {
+
+    width: 120px;
+
+    height: 170px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #1e293b;
+
+    border-radius: 10px;
+
+    font-size: 40px;
+}
+
+
+.selected-movie-info h2 {
+
+    margin: 0 0 12px;
+
+    font-size: 25px;
+
+    color: #ffffff;
+}
+
+
+.selected-movie-info p {
+
+    margin: 7px 0;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   DATE BOX
+========================================================= */
+
+.date-box {
+
+    max-width: 300px;
+
+    margin: 0 auto 30px;
+
+    padding: 22px;
+
+    text-align: center;
+
+    background:
+        rgba(15, 23, 42, 0.86);
+
+    border-radius: 16px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.date-box h3 {
+
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+}
+
+
+.date-box input {
+
+    padding: 12px 16px;
+
+    border-radius: 8px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   THEATRES LIST
+========================================================= */
+
+.theatres-list {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(320px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   THEATRE CARD
+========================================================= */
+
+.theatre-card {
+
+    padding: 25px;
+
+    background:
+        rgba(15, 23, 42, 0.88);
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.theatre-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0, 0, 0, 0.55);
+
+    border-color:
+        rgba(255, 255, 255, 0.25);
+}
+
+
+/* =========================================================
+   SELECTED THEATRE
+========================================================= */
+
+.selected-theatre {
+
+    border:
+        2px solid
+        #f59e0b;
+
+    box-shadow:
+        0 0 25px
+        rgba(245, 158, 11, 0.25);
+}
+
+
+/* =========================================================
+   THEATRE TITLE
+========================================================= */
+
+.theatre-card h2 {
+
+    margin: 0 0 12px;
+
+    font-size: 23px;
+
+    color: #ffffff;
+}
+
+
+.theatre-card > p {
+
+    margin: 8px 0;
+
+    color: #cbd5e1;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   SHOW SECTION
+========================================================= */
+
+.show-section {
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+}
+
+
+.show-section h3 {
+
+    margin: 0 0 15px;
+
+    font-size: 18px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SHOW TIMES
+========================================================= */
+
+.show-times {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.show-times button {
+
+    min-width: 105px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.2);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.show-times button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   ACTIVE SHOW TIME
+========================================================= */
+
+.show-times button.active-time {
+
+    background:
+        #f59e0b;
+
+    color: #111827;
+
+    border-color:
+        #f59e0b;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 18px
+        rgba(245, 158, 11, 0.35);
+}
+
+
+/* =========================================================
+   SHOW TIME
+========================================================= */
+
+.show-time-main {
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+.show-language {
+
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+   SELECT SEATS BUTTON
+========================================================= */
+
+.seat-btn {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 13px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f59e0b,
+            #ea580c
+        );
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.seat-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(234, 88, 12, 0.4);
+}
+
+
+/* =========================================================
+   NO THEATRES
+========================================================= */
+
+.no-theatres {
+
+    grid-column: 1 / -1;
+
+    padding: 50px 25px;
+
+    text-align: center;
+
+    background:
+        rgba(15, 23, 42, 0.88);
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.no-theatres > div {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+
+.no-theatres h2 {
+
+    margin: 0 0 12px;
+
+    color: #ffffff;
+}
+
+
+.no-theatres p {
+
+    margin: 8px 0;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   MESSAGE / LOADING / ERROR
+========================================================= */
+
+.theatre-message {
+
+    max-width: 600px;
+
+    margin: 80px auto;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background:
+        rgba(15, 23, 42, 0.9);
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.5);
+}
+
+
+.theatre-message-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+.theatre-message h2 {
+
+    color: #ffffff;
+
+    margin-bottom: 12px;
+}
+
+
+.theatre-message p {
+
+    color: #cbd5e1;
+
+    line-height: 1.6;
+}
+
+
+.theatre-message button {
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f59e0b,
+            #ea580c
+        );
+
+    color: #ffffff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   LOADING SPINNER
+========================================================= */
+
+.theatre-spinner {
+
+    width: 50px;
+
+    height: 50px;
+
+    margin: 0 auto 20px;
+
+    border:
+        5px solid
+        rgba(255, 255, 255, 0.2);
+
+    border-top-color:
+        #f59e0b;
+
+    border-radius: 50%;
+
+    animation:
+        theatreSpin 0.8s linear infinite;
+}
+
+
+@keyframes theatreSpin {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .theatre-page {
+
+        padding:
+            25px 12px 45px;
+    }
+
+
+    .theatre-page::before {
+
+        background-position:
+            center top;
+    }
+
+
+    .theatre-header {
+
+        padding: 22px 15px;
+    }
+
+
+    .theatre-header h1 {
+
+        font-size: 27px;
+    }
+
+
+    .selected-movie {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 20px;
+    }
+
+
+    .theatre-movie-image,
+    .no-theatre-image {
+
+        width: 100px;
+
+        height: 145px;
+    }
+
+
+    .theatres-list {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .theatre-card {
+
+        padding: 20px;
+    }
+
+
+    .show-times button {
+
+        flex: 1;
+
+        min-width: 100px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .theatre-page {
+
+        padding:
+            18px 10px 35px;
+    }
+
+
+    .theatre-header h1 {
+
+        font-size: 24px;
+    }
+
+
+    .theatre-header-icon {
+
+        font-size: 35px;
+    }
+
+
+    .selected-movie {
+
+        gap: 15px;
+    }
+
+
+    .selected-movie-info h2 {
+
+        font-size: 21px;
+    }
+
+
+    .date-box {
+
+        padding: 18px 12px;
+    }
+
+
+    .theatre-card h2 {
+
+        font-size: 20px;
+    }
+
+
+    .show-times {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .show-times button {
+
+        min-width: 0;
+
+        width: 100%;
+    }
+
+}

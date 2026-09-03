@@ -1,0 +1,635 @@
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    background: #080b14;
+
+}
+
+
+/* =================================
+   HERO BACKGROUND
+================================= */
+
+.hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 0;
+
+    overflow: hidden;
+
+}
+
+
+.hero-background img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    display: block;
+
+    transform: scale(1.02);
+
+}
+
+
+/* =================================
+   HERO IMAGE DARK GRADIENT
+================================= */
+
+.hero-background::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            to right,
+            #080b14 0%,
+            rgba(8, 11, 20, 0.94) 18%,
+            rgba(8, 11, 20, 0.72) 40%,
+            rgba(8, 11, 20, 0.35) 65%,
+            rgba(8, 11, 20, 0.15) 100%
+        );
+
+}
+
+
+/* =================================
+   HERO OVERLAY
+================================= */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(229, 9, 20, 0.12),
+            transparent 35%
+        );
+
+}
+
+
+/* =================================
+   HERO CONTENT
+================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    max-width: 620px;
+
+    margin-left: 8%;
+
+    padding: 45px 0;
+
+}
+
+
+/* =================================
+   SMALL TITLE
+================================= */
+
+.hero-small-title {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #ff4d57;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+}
+
+
+/* =================================
+   HERO TITLE
+================================= */
+
+.hero h1 {
+
+    margin: 0 0 16px;
+
+    font-size: 46px;
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.65);
+
+}
+
+
+/* =================================
+   HERO DESCRIPTION
+================================= */
+
+.hero p {
+
+    max-width: 540px;
+
+    margin: 0 0 24px;
+
+    color: #d1d5db;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+
+}
+
+
+/* =================================
+   HERO BUTTONS
+================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =================================
+   BOOK NOW BUTTON
+================================= */
+
+.hero-book-btn {
+
+    padding: 12px 27px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #ff3b30
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 20px
+        rgba(229, 9, 20, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.hero-book-btn:hover {
+
+    transform:
+        translateY(-2px)
+        scale(1.03);
+
+    box-shadow:
+        0 10px 25px
+        rgba(229, 9, 20, 0.5);
+
+}
+
+
+/* =================================
+   EXPLORE MOVIES BUTTON
+================================= */
+
+.hero-movies-btn {
+
+    padding: 11px 25px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.5);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.hero-movies-btn:hover {
+
+    background:
+        rgba(255, 255, 255, 0.18);
+
+    border-color:
+        rgba(255, 255, 255, 0.8);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =================================
+   BOTTOM FADE
+================================= */
+
+.hero-bottom-fade {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 70px;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #080b14
+        );
+
+}
+
+
+/* =================================
+   LARGE TABLET
+================================= */
+
+@media (max-width: 1100px) {
+
+    .hero {
+
+        min-height: 430px;
+
+    }
+
+
+    .hero-content {
+
+        margin-left: 6%;
+
+        max-width: 570px;
+
+        padding: 40px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 15px;
+
+    }
+
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 850px) {
+
+    .hero {
+
+        min-height: 420px;
+
+    }
+
+
+    .hero-background img {
+
+        object-position: 60% center;
+
+    }
+
+
+    .hero-background::after {
+
+        background:
+
+            linear-gradient(
+                to right,
+                #080b14 0%,
+                rgba(8, 11, 20, 0.88) 35%,
+                rgba(8, 11, 20, 0.55) 65%,
+                rgba(8, 11, 20, 0.25) 100%
+            );
+
+    }
+
+
+    .hero-content {
+
+        margin-left: 5%;
+
+        margin-right: 5%;
+
+        padding: 35px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+
+        min-height: 500px;
+
+        align-items: flex-end;
+
+    }
+
+
+    .hero-background img {
+
+        object-position: center top;
+
+    }
+
+
+    .hero-background::after {
+
+        background:
+
+            linear-gradient(
+                to bottom,
+                rgba(8, 11, 20, 0.1) 0%,
+                rgba(8, 11, 20, 0.3) 25%,
+                rgba(8, 11, 20, 0.7) 55%,
+                #080b14 88%,
+                #080b14 100%
+            );
+
+    }
+
+
+    .hero-overlay {
+
+        background:
+
+            linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(8, 11, 20, 0.25) 40%,
+                rgba(8, 11, 20, 0.65) 75%,
+                #080b14 100%
+            );
+
+    }
+
+
+    .hero-content {
+
+        margin: 0;
+
+        max-width: 100%;
+
+        padding:
+            30px 22px
+            55px;
+
+        text-align: center;
+
+    }
+
+
+    .hero-small-title {
+
+        font-size: 12px;
+
+        letter-spacing: 1.3px;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 34px;
+
+        line-height: 1.12;
+
+        letter-spacing: -0.5px;
+
+        margin-bottom: 14px;
+
+    }
+
+
+    .hero p {
+
+        max-width: 500px;
+
+        margin:
+            0 auto
+            22px;
+
+        font-size: 15px;
+
+        line-height: 1.5;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+    .hero-book-btn,
+    .hero-movies-btn {
+
+        padding:
+            11px 22px;
+
+        font-size: 14px;
+
+    }
+
+
+    .hero-bottom-fade {
+
+        height: 80px;
+
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+
+        min-height: 480px;
+
+    }
+
+
+    .hero-content {
+
+        padding:
+            25px 18px
+            48px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+
+    }
+
+
+    .hero-book-btn,
+    .hero-movies-btn {
+
+        width: 100%;
+
+        max-width: 220px;
+
+    }
+
+}

@@ -1,0 +1,451 @@
+/* =================================
+   BOOKING SUCCESS PAGE
+================================= */
+
+/* =====================================================
+   SUCCESS PAGE
+===================================================== */
+
+.success-page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px 80px;
+
+    box-sizing: border-box;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 8, 18, 0.82),
+            rgba(5, 8, 18, 0.92)
+        ),
+        url("src/background/booking-success-bg.jpg") !important;
+
+    background-size: cover !important;
+
+    background-position: center !important;
+
+    background-repeat: no-repeat !important;
+
+    background-attachment: fixed;
+
+}
+
+/* =================================
+   SUCCESS TICKET
+================================= */
+
+.success-ticket {
+    width: 450px;
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.5);
+
+    animation:
+        popup 0.5s ease;
+
+    overflow: hidden;
+}
+
+
+/* =================================
+   SUCCESS ICON
+================================= */
+
+.success-icon {
+    font-size: 60px;
+
+    animation:
+        bounce 1s infinite;
+}
+
+
+/* =================================
+   SUCCESS HEADING
+================================= */
+
+.success-ticket h1 {
+    color: #16a34a;
+
+    margin: 15px 0;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+/* =================================
+   THANK YOU TEXT
+================================= */
+
+.thank-text {
+    color: #6b7280;
+
+    margin-bottom: 25px;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* =================================
+   TICKET BOX
+================================= */
+
+.ticket-box {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f3f4f6,
+            #e5e7eb
+        );
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    text-align: left;
+
+    overflow-wrap: break-word;
+
+    border:
+        1px solid #e5e7eb;
+}
+
+
+/* =================================
+   MOVIE TITLE
+================================= */
+
+.ticket-box h2 {
+    text-align: center;
+
+    color: #e50914;
+
+    word-break: break-word;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   TICKET DETAILS
+================================= */
+
+.ticket-box p {
+    margin: 12px 0;
+
+    color: #374151;
+
+    font-size: 16px;
+
+    word-break: break-word;
+
+    line-height: 1.5;
+}
+
+
+/* =================================
+   AMOUNT
+================================= */
+
+.amount {
+    text-align: center;
+
+    color: #e50914;
+
+    margin-top: 20px;
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+
+/* =================================
+   QR TICKET
+================================= */
+
+.qr-ticket {
+    width: 100px;
+
+    height: 100px;
+
+    background: #111827;
+
+    color: white;
+
+    margin: 25px auto;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.qr-ticket p {
+    font-size: 12px;
+
+    color: #d1d5db;
+
+    margin: 5px 0 0;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.success-ticket button {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #ff512f
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.success-ticket button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #b20710,
+            #e50914
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(229, 9, 20, 0.3);
+}
+
+
+/* =================================
+   DOWNLOAD BUTTON
+================================= */
+
+.download-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        ) !important;
+}
+
+
+.download-btn:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #2563eb
+        ) !important;
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes popup {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+@keyframes bounce {
+
+    50% {
+        transform:
+            translateY(-10px);
+    }
+}
+
+
+/* =================================
+   TABLET / MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .success-page {
+        padding: 35px 15px;
+    }
+
+
+    .success-ticket {
+        width: 100%;
+
+        max-width: 450px;
+
+        padding: 25px;
+
+        border-radius: 22px;
+    }
+
+
+    .success-icon {
+        font-size: 52px;
+    }
+
+
+    .success-ticket h1 {
+        font-size: 27px;
+    }
+
+
+    .ticket-box {
+        padding: 17px;
+    }
+
+
+    .ticket-box h2 {
+        font-size: 21px;
+    }
+
+
+    .ticket-box p {
+        font-size: 14px;
+    }
+
+
+    .amount {
+        font-size: 25px;
+    }
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .success-page {
+        padding: 25px 10px;
+    }
+
+
+    .success-ticket {
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .success-icon {
+        font-size: 48px;
+    }
+
+
+    .success-ticket h1 {
+        font-size: 24px;
+    }
+
+
+    .thank-text {
+        font-size: 14px;
+    }
+
+
+    .ticket-box {
+        padding: 15px;
+    }
+
+
+    .ticket-box h2 {
+        font-size: 19px;
+    }
+
+
+    .ticket-box p {
+        font-size: 13px;
+    }
+
+
+    .amount {
+        font-size: 23px;
+    }
+
+
+    .success-ticket button {
+        padding: 13px;
+
+        font-size: 16px;
+    }
+}

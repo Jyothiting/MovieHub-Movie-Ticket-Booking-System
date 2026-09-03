@@ -1,0 +1,415 @@
+/* ================================
+   UPCOMING MOVIES SECTION
+================================ */
+
+.upcoming-section {
+    padding: 60px 40px;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(229, 9, 20, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(37, 99, 235, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #080b14,
+            #111827,
+            #1f2937
+        );
+
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   HEADING
+================================ */
+
+.upcoming-section h2 {
+    text-align: center;
+
+    font-size: 34px;
+
+    color: white;
+
+    margin-bottom: 40px;
+
+    font-weight: 800;
+}
+
+
+/* ================================
+   MOVIE CONTAINER
+================================ */
+
+.upcoming-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* ================================
+   UPCOMING CARD
+================================ */
+
+.upcoming-card {
+    width: 280px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.05)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+.upcoming-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ================================
+   IMAGE
+================================ */
+
+.upcoming-image {
+    position: relative;
+
+    width: 100%;
+}
+
+
+.upcoming-image img {
+    width: 100%;
+
+    height: 350px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ================================
+   UPCOMING BADGE
+================================ */
+
+.upcoming-image span {
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #ff512f
+        );
+
+    color: white;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.upcoming-content {
+    padding: 20px;
+
+    text-align: center;
+}
+
+
+.upcoming-content h3 {
+    font-size: 24px;
+
+    color: white;
+
+    margin-bottom: 10px;
+
+    word-break: break-word;
+}
+
+
+.upcoming-content p {
+    color: #cbd5e1;
+
+    margin: 8px 0;
+
+    line-height: 1.5;
+}
+
+
+/* ================================
+   TRAILER BUTTON
+================================ */
+
+.upcoming-content button {
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #374151
+        );
+
+    color: white;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.upcoming-content button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #ff512f
+        );
+
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   TRAILER MODAL
+================================ */
+
+.trailer-modal {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background:
+        rgba(0, 0, 0, 0.85);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    z-index: 2000;
+}
+
+
+/* ================================
+   TRAILER BOX
+================================ */
+
+.trailer-box {
+    width: 700px;
+
+    max-width: 100%;
+
+    background: #111827;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.6);
+
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   CLOSE BUTTON
+================================ */
+
+.close-btn {
+    position: absolute;
+
+    top: 10px;
+
+    right: 10px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e50914;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    z-index: 2;
+}
+
+
+/* ================================
+   TRAILER IFRAME
+================================ */
+
+.trailer-box iframe {
+    width: 100%;
+
+    height: 400px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .upcoming-section {
+        padding: 40px 20px;
+    }
+
+
+    .upcoming-section h2 {
+        font-size: 28px;
+    }
+
+
+    .upcoming-card {
+        width: 90%;
+
+        max-width: 350px;
+    }
+
+
+    .upcoming-image img {
+        height: 400px;
+    }
+
+
+    .trailer-box iframe {
+        height: 250px;
+    }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    .upcoming-section {
+        padding: 35px 12px;
+    }
+
+
+    .upcoming-section h2 {
+        font-size: 25px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .upcoming-card {
+        width: 100%;
+
+        max-width: 330px;
+    }
+
+
+    .upcoming-image img {
+        height: 380px;
+    }
+
+
+    .upcoming-content {
+        padding: 18px;
+    }
+
+
+    .upcoming-content h3 {
+        font-size: 21px;
+    }
+
+}
