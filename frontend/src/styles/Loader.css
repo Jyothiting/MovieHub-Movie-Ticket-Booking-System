@@ -1,0 +1,201 @@
+/* =================================
+   LOADER PAGE
+================================= */
+
+.loader-page {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(229, 9, 20, 0.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(37, 99, 235, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #080b14,
+            #111827,
+            #1f2937
+        );
+
+    z-index: 9999;
+}
+
+
+/* =================================
+   LOADER CONTENT
+================================= */
+
+.loader-content {
+    text-align: center;
+
+    color: white;
+
+    animation: fadeIn 0.5s ease;
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.loader-content h1 {
+    color: #e50914;
+
+    font-size: 45px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 5px 20px rgba(229, 9, 20, 0.35);
+}
+
+
+/* =================================
+   POPCORN
+================================= */
+
+.popcorn {
+    font-size: 70px;
+
+    display: inline-block;
+
+    animation: bounce 1s infinite;
+}
+
+
+/* =================================
+   DESCRIPTION
+================================= */
+
+.loader-content p {
+    font-size: 20px;
+
+    color: #cbd5e1;
+
+    margin-top: 15px;
+}
+
+
+/* =================================
+   LOADING DOTS
+================================= */
+
+.loading-dots {
+    margin-top: 20px;
+}
+
+
+.loading-dots span {
+    display: inline-block;
+
+    width: 10px;
+
+    height: 10px;
+
+    margin: 0 5px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    animation: dotAnimation 1.4s infinite;
+}
+
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+@keyframes dotAnimation {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .loader-content h1 {
+        font-size: 32px;
+    }
+
+
+    .popcorn {
+        font-size: 55px;
+    }
+
+
+    .loader-content p {
+        font-size: 16px;
+    }
+}

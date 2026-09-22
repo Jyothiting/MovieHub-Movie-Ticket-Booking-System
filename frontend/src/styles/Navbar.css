@@ -1,0 +1,416 @@
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 60px;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    color: #111827;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.18);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.logo {
+    text-decoration: none;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    color: #e50914;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+
+.logo:hover {
+    transform: scale(1.03);
+
+    color: #e50914;
+}
+
+
+/* =================================
+   NAVIGATION
+================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+.nav-links > a {
+    text-decoration: none;
+
+    color: #333333;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.nav-links > a:hover {
+    color: #e50914;
+
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   USER MENU
+================================= */
+
+.user-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* =================================
+   PROFILE BUTTON
+================================= */
+
+.profile-nav {
+    border: none;
+
+    background: transparent;
+
+    color: #333333;
+
+    padding: 8px 0;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.profile-nav:hover {
+    color: #e50914;
+
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   MY BOOKING BUTTON
+================================= */
+
+.booking-nav {
+    border: none;
+
+    background: transparent;
+
+    color: #333333;
+
+    padding: 8px 0;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.booking-nav:hover {
+    color: #e50914;
+
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   AUTH MENU
+================================= */
+
+.auth-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.auth-menu a {
+    text-decoration: none;
+
+    color: #333333;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.auth-menu a:hover {
+    color: #e50914;
+
+    transform: translateY(-1px);
+}
+
+
+/* =================================
+   LOGOUT
+================================= */
+
+.logout-nav {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #b20710
+        );
+
+    color: white;
+
+    padding: 10px 22px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.logout-nav:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #b20710,
+            #8f050c
+        );
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 6px 15px rgba(229, 9, 20, 0.3);
+}
+
+
+/* =================================
+   MOBILE MENU BUTTON
+================================= */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: #111827;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 16px 30px;
+    }
+
+
+    .nav-links {
+        gap: 20px;
+    }
+
+
+    .user-menu {
+        gap: 15px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+
+        position: sticky;
+    }
+
+
+    .logo {
+        font-size: 23px;
+    }
+
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        background: white;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+
+        padding: 25px 0;
+
+        box-shadow:
+            0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    .user-menu {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    .auth-menu {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    .profile-nav,
+    .booking-nav {
+        font-size: 16px;
+    }
+
+
+    .logout-nav {
+        width: 130px;
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 14px 15px;
+    }
+
+
+    .logo {
+        font-size: 21px;
+    }
+
+
+    .menu-btn {
+        font-size: 27px;
+    }
+
+}

@@ -1,0 +1,1148 @@
+/* =====================================================
+   MOVIEHUB - MOVIES SECTION
+   Movies Background
+===================================================== */
+
+.movies-section {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 40px 6% 70px;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    color: #ffffff;
+
+    background-color: #080b14;
+
+    /*
+       IMPORTANT:
+       Your image is inside:
+
+       src/background/movies-bg.jpg
+
+       Movie.css is inside:
+
+       src/styles/Movie.css
+
+       Therefore:
+
+       ../background/movies-bg.jpg
+    */
+
+    background-image:
+
+        linear-gradient(
+            rgba(5, 8, 18, 0.55),
+            rgba(5, 8, 18, 0.78)
+        ),
+
+        url("../background/movies-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+}
+
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+
+.movies-section > h2 {
+
+    width: min(1200px, 100%);
+
+    margin: 0 auto 22px;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: 0.3px;
+
+    text-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.60);
+
+}
+
+
+/* =====================================================
+   SEARCH + FILTER AREA
+===================================================== */
+
+.movie-filters {
+
+    width: min(1200px, 100%);
+
+    margin: 0 auto 14px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(5, 8, 18, 0.55);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.30);
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.movie-search {
+
+    flex: 1;
+
+    min-width: 260px;
+
+    max-width: 480px;
+
+}
+
+
+.movie-search input {
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        #475569;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background:
+        rgba(15, 23, 42, 0.92);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.movie-search input::placeholder {
+
+    color:
+        #94a3b8;
+
+}
+
+
+.movie-search input:hover {
+
+    border-color:
+        #64748b;
+
+}
+
+
+.movie-search input:focus {
+
+    border-color:
+        #e50914;
+
+    background:
+        rgba(15, 23, 42, 1);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(229, 9, 20, 0.15),
+
+        0 6px 15px
+        rgba(0, 0, 0, 0.20);
+
+}
+
+
+/* =====================================================
+   FILTER DROPDOWNS
+===================================================== */
+
+.movie-filter {
+
+    min-width: 160px;
+
+}
+
+
+.movie-filter select {
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 30px 0 12px;
+
+    box-sizing: border-box;
+
+    border:
+        1px solid
+        #475569;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background:
+        #111827;
+
+    color:
+        #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.2s ease;
+
+}
+
+
+.movie-filter select:hover {
+
+    border-color:
+        #64748b;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.movie-filter select:focus {
+
+    border-color:
+        #e50914;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(229, 9, 20, 0.15);
+
+}
+
+
+.movie-filter select option {
+
+    background:
+        #111827;
+
+    color:
+        #ffffff;
+
+}
+
+
+/* =====================================================
+   CLEAR FILTER BUTTON
+===================================================== */
+
+.clear-filter-btn {
+
+    min-height: 42px;
+
+    padding: 0 16px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #b20710
+        );
+
+    color:
+        #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 15px
+        rgba(229, 9, 20, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.clear-filter-btn:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0121e,
+            #8f050c
+        );
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 20px
+        rgba(229, 9, 20, 0.35);
+
+}
+
+
+.clear-filter-btn:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =====================================================
+   RESULT INFORMATION
+===================================================== */
+
+.movie-result-info {
+
+    width:
+        min(1200px, 100%);
+
+    margin:
+        0 auto 18px;
+
+    box-sizing:
+        border-box;
+
+}
+
+
+.movie-result-info p {
+
+    margin:
+        0;
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        14px;
+
+}
+
+
+.movie-result-info strong {
+
+    color:
+        #ffffff;
+
+    font-size:
+        15px;
+
+}
+
+
+/* =====================================================
+   MOVIE CONTAINER
+===================================================== */
+
+.movie-container {
+
+    width:
+        min(1200px, 100%);
+
+    margin:
+        0 auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap:
+        28px;
+
+    align-items:
+        stretch;
+
+    box-sizing:
+        border-box;
+
+}
+
+
+/* =====================================================
+   MOVIE CARD SUPPORT
+===================================================== */
+
+.movie-container > * {
+
+    min-width:
+        0;
+
+    width:
+        100%;
+
+    box-sizing:
+        border-box;
+
+}
+
+
+/* =====================================================
+   NO MOVIES FOUND
+===================================================== */
+
+.no-movies {
+
+    width:
+        min(600px, 100%);
+
+    margin:
+        60px auto;
+
+    padding:
+        45px 30px;
+
+    box-sizing:
+        border-box;
+
+    text-align:
+        center;
+
+    border-radius:
+        22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5, 8, 18, 0.70),
+            rgba(15, 23, 42, 0.55)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.40);
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+.no-movies-icon {
+
+    width:
+        80px;
+
+    height:
+        80px;
+
+    margin:
+        0 auto 18px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(229, 9, 20, 0.12);
+
+    border:
+        1px solid
+        rgba(229, 9, 20, 0.25);
+
+    font-size:
+        42px;
+
+}
+
+
+.no-movies h3 {
+
+    margin:
+        0 0 10px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        25px;
+
+    font-weight:
+        800;
+
+}
+
+
+.no-movies p {
+
+    margin:
+        0 0 25px;
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.6;
+
+}
+
+
+.no-movies .clear-filter-btn {
+
+    display:
+        inline-flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    min-width:
+        150px;
+
+}
+
+
+/* =====================================================
+   LOADING AREA
+===================================================== */
+
+.movies-loading {
+
+    min-height:
+        65vh;
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+}
+
+
+.movies-loading h2 {
+
+    margin:
+        20px 0 0;
+
+    color:
+        #ffffff;
+
+    font-size:
+        24px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =====================================================
+   LOADING SPINNER
+===================================================== */
+
+.movie-spinner {
+
+    width:
+        55px;
+
+    height:
+        55px;
+
+    box-sizing:
+        border-box;
+
+    border:
+        5px solid
+        rgba(255, 255, 255, 0.12);
+
+    border-top:
+        5px solid
+        #e50914;
+
+    border-right:
+        5px solid
+        #e50914;
+
+    border-radius:
+        50%;
+
+    animation:
+        movieSpin 0.8s linear infinite;
+
+    box-shadow:
+        0 0 25px
+        rgba(229, 9, 20, 0.20);
+
+}
+
+
+@keyframes movieSpin {
+
+    from {
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   ERROR AREA
+===================================================== */
+
+.movies-error {
+
+    min-height:
+        65vh;
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+    padding:
+        30px;
+
+    box-sizing:
+        border-box;
+
+}
+
+
+.movies-error h2 {
+
+    margin:
+        0 0 12px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        25px;
+
+    font-weight:
+        800;
+
+}
+
+
+.movies-error p {
+
+    margin:
+        0;
+
+    color:
+        #cbd5e1;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.6;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .movies-section {
+
+        padding:
+            35px 4% 60px;
+
+        background-attachment:
+            scroll;
+
+    }
+
+
+    .movies-section > h2 {
+
+        font-size:
+            32px;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .movie-filters {
+
+        padding:
+            10px;
+
+    }
+
+
+    .movie-search {
+
+        min-width:
+            220px;
+
+    }
+
+
+    .movie-filter {
+
+        min-width:
+            145px;
+
+    }
+
+
+    .movie-container {
+
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+
+        gap:
+            22px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .movies-section {
+
+        padding:
+            32px 20px 55px;
+
+        background-attachment:
+            scroll;
+
+        background-position:
+            center center;
+
+    }
+
+
+    .movies-section > h2 {
+
+        font-size:
+            29px;
+
+        margin-bottom:
+            20px;
+
+    }
+
+
+    .movie-filters {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            8px;
+
+        padding:
+            10px;
+
+    }
+
+
+    .movie-search {
+
+        width:
+            100%;
+
+        max-width:
+            none;
+
+        min-width:
+            0;
+
+    }
+
+
+    .movie-filter {
+
+        width:
+            100%;
+
+        min-width:
+            0;
+
+    }
+
+
+    .movie-search input,
+    .movie-filter select {
+
+        height:
+            40px;
+
+    }
+
+
+    .clear-filter-btn {
+
+        width:
+            100%;
+
+        min-height:
+            40px;
+
+    }
+
+
+    .movie-result-info {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    .movie-container {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap:
+            20px;
+
+    }
+
+
+    .no-movies {
+
+        margin:
+            45px auto;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 520px) {
+
+    .movies-section {
+
+        padding:
+            28px 14px 45px;
+
+    }
+
+
+    .movies-section > h2 {
+
+        font-size:
+            26px;
+
+        margin-bottom:
+            18px;
+
+    }
+
+
+    .movie-filters {
+
+        border-radius:
+            12px;
+
+        padding:
+            9px;
+
+        gap:
+            7px;
+
+    }
+
+
+    .movie-search input,
+    .movie-filter select {
+
+        height:
+            40px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .clear-filter-btn {
+
+        min-height:
+            40px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .movie-result-info p {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .movie-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            20px;
+
+    }
+
+
+    .no-movies {
+
+        padding:
+            40px 20px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .no-movies-icon {
+
+        width:
+            70px;
+
+        height:
+            70px;
+
+        font-size:
+            36px;
+
+    }
+
+
+    .no-movies h3 {
+
+        font-size:
+            22px;
+
+    }
+
+
+    .no-movies p {
+
+        font-size:
+            14px;
+
+    }
+
+
+    .movies-loading h2 {
+
+        font-size:
+            21px;
+
+    }
+
+
+    .movies-error h2 {
+
+        font-size:
+            21px;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .movies-section {
+
+        padding:
+            25px 10px 40px;
+
+    }
+
+
+    .movies-section > h2 {
+
+        font-size:
+            23px;
+
+    }
+
+
+    .movie-filters {
+
+        padding:
+            8px;
+
+    }
+
+
+    .movie-search input,
+    .movie-filter select {
+
+        padding-left:
+            10px;
+
+        padding-right:
+            10px;
+
+    }
+
+
+    .movie-container {
+
+        gap:
+            16px;
+
+    }
+
+}
+

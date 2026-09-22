@@ -1,0 +1,122 @@
+/* =========================================================
+   MOVIEHUB - HOME PAGE
+========================================================= */
+
+
+/* =========================================================
+   HOME PAGE
+   Navbar stays outside the background
+========================================================= */
+
+.home-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    background: #080b14;
+
+}
+
+
+/* =========================================================
+   HOME BACKGROUND CONTENT
+   Background starts BELOW Navbar
+========================================================= */
+
+.home-background-content {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 70px);
+
+    box-sizing: border-box;
+
+    background-color: #080b14;
+
+    background-image:
+        linear-gradient(
+            rgba(5, 8, 18, 0.62),
+            rgba(5, 8, 18, 0.82)
+        ),
+        var(--home-background);
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.home-background-content main {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    min-height: 100%;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .home-background-content {
+
+        background-attachment: scroll;
+
+        background-position: center center;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .home-background-content {
+
+        min-height: calc(100vh - 60px);
+
+        background-attachment: scroll;
+
+        background-position: center center;
+
+        background-size: cover;
+
+        background-image:
+            linear-gradient(
+                rgba(5, 8, 18, 0.58),
+                rgba(5, 8, 18, 0.84)
+            ),
+            var(--home-background);
+
+    }
+
+}

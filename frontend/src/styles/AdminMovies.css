@@ -1,0 +1,1604 @@
+/* =====================================================
+   ADMIN MOVIES PAGE
+===================================================== */
+
+/* =====================================================
+   ADMIN MOVIES PAGE
+===================================================== */
+
+.admin-movies-page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 50px 20px 80px;
+
+    box-sizing: border-box;
+
+    background-image:
+        url("/src/background/adminmovies-bg.jpg") !important;
+
+    background-size: cover !important;
+
+    background-position: center !important;
+
+    background-repeat: no-repeat !important;
+
+    background-attachment: fixed;
+}
+
+
+.admin-movies-container {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.admin-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+    color: white;
+}
+
+
+.admin-header h1 {
+
+    margin: 0 0 8px;
+
+    font-size: 36px;
+
+    color: #ffffff !important;
+}
+
+
+.admin-header p {
+
+    margin: 0;
+
+    color: #d1d5db !important;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   ADMIN LOGOUT BUTTON
+===================================================== */
+
+.admin-logout-btn {
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dc2626,
+            #991b1b
+        );
+
+    color: #ffffff !important;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.admin-logout-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(220, 38, 38, 0.35);
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.admin-form-card,
+.admin-list-card {
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 20px 40px
+        rgba(0, 0, 0, 0.25);
+
+    color: #111827;
+}
+
+
+.admin-form-card h2,
+.admin-list-card h2 {
+
+    margin: 0 0 25px;
+
+    color: #111827 !important;
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   FORM GRID
+===================================================== */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group.full-width {
+
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+
+    color: #374151 !important;
+
+    font-weight: 700;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   INPUT / SELECT / TEXTAREA
+===================================================== */
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #111827 !important;
+
+    background: #ffffff;
+
+    transition: 0.25s;
+}
+
+
+/* =====================================================
+   DATE INPUT
+===================================================== */
+
+.form-group input[type="date"] {
+
+    cursor: pointer;
+
+    min-height: 44px;
+}
+
+
+/* =====================================================
+   TIME SELECT
+===================================================== */
+
+.form-group select {
+
+    cursor: pointer;
+
+    min-height: 44px;
+}
+
+
+/* =====================================================
+   DISABLED SELECT
+===================================================== */
+
+.form-group select:disabled {
+
+    background: #f3f4f6;
+
+    color: #9ca3af !important;
+
+    cursor: not-allowed;
+
+    border-color: #e5e7eb;
+}
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+}
+
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+    border-color: #e50914;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(229, 9, 20, 0.10);
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+===================================================== */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #9ca3af;
+}
+
+
+/* =====================================================
+   SHOW TIME INFORMATION
+===================================================== */
+
+.show-time-info {
+
+    margin-top: 8px;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    background: #f3f4f6;
+
+    border-left:
+        4px solid #2563eb;
+
+    color: #374151 !important;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.show-time-info strong {
+
+    color: #111827 !important;
+}
+
+
+/* =====================================================
+   NEXT SHOW INFORMATION
+===================================================== */
+
+.next-show-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 10px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #f0fdf4
+        );
+
+    border:
+        1px solid #bfdbfe;
+
+    color: #1f2937 !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    box-sizing: border-box;
+}
+
+
+.next-show-info strong {
+
+    color: #111827 !important;
+}
+
+
+.next-show-info span {
+
+    color: #2563eb !important;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   NEXT SHOW HIGHLIGHT
+===================================================== */
+
+.next-show-time {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 5px 9px;
+
+    margin-left: 3px;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: #ffffff !important;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   FORM BUTTONS
+===================================================== */
+
+.admin-form-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.add-movie-btn,
+.cancel-edit-btn {
+
+    border: none;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    color: #ffffff !important;
+
+    font-weight: 700;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.add-movie-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #e50914,
+            #b20710
+        );
+}
+
+
+.add-movie-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 16px
+        rgba(229, 9, 20, 0.25);
+}
+
+
+.cancel-edit-btn {
+
+    background: #374151;
+}
+
+
+.cancel-edit-btn:hover {
+
+    background: #111827;
+}
+
+
+/* =====================================================
+   ADD SHOW BUTTON
+===================================================== */
+
+.add-show-btn {
+
+    width: 100%;
+
+    min-height: 44px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 12px 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16a34a,
+            #15803d
+        );
+
+    color: #ffffff !important;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.add-show-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 15px
+        rgba(22, 163, 74, 0.25);
+}
+
+
+.add-show-btn:disabled {
+
+    background: #9ca3af;
+
+    color: #ffffff !important;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =====================================================
+   MOVIE SHOW SCHEDULE
+   IMPORTANT - VISIBILITY FIX
+===================================================== */
+
+.movie-schedule {
+
+    position: relative;
+
+    z-index: 10;
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    border-top:
+        1px solid #d1d5db;
+
+    border-radius: 12px;
+
+    background: #ffffff !important;
+
+    color: #111827 !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+/* =====================================================
+   MOVIE SHOW SCHEDULE TITLE
+===================================================== */
+
+.movie-schedule h3 {
+
+    display: block;
+
+    margin: 0 0 10px;
+
+    color: #000000 !important;
+
+    background: transparent !important;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+/* =====================================================
+   MOVIE SHOW SCHEDULE DESCRIPTION
+===================================================== */
+
+.movie-schedule > p {
+
+    display: block;
+
+    margin: 0 0 20px;
+
+    color: #000000 !important;
+
+    background: transparent !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+/* =====================================================
+   SHOW TIMING LIST
+===================================================== */
+
+.show-timing-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    width: 100%;
+
+    color: #111827 !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+/* =====================================================
+   SHOW TIMING CARD
+===================================================== */
+
+.show-timing-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    width: 100%;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    background: #ffffff !important;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    color: #111827 !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    transition: 0.25s;
+}
+
+
+.show-timing-item:hover {
+
+    background: #f3f4f6 !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================================
+   SHOW TIMING INFORMATION
+===================================================== */
+
+.show-timing-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    flex: 1;
+
+    min-width: 0;
+
+    color: #000000 !important;
+
+    background: transparent !important;
+
+    font-size: 14px;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+/* =====================================================
+   SHOW TIMING DETAILS - ALL TEXT
+===================================================== */
+
+.show-timing-details * {
+
+    color: #000000 !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+.show-timing-details strong {
+
+    display: block;
+
+    color: #000000 !important;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+.show-timing-details span {
+
+    display: block;
+
+    color: #000000 !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   SHOW TIME BADGE
+===================================================== */
+
+.show-time-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    padding: 5px 10px;
+
+    border-radius: 7px;
+
+    background: #eff6ff !important;
+
+    color: #1d4ed8 !important;
+
+    border:
+        1px solid #bfdbfe;
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+
+.show-time-badge * {
+
+    color: #1d4ed8 !important;
+}
+
+
+/* =====================================================
+   DELETE SHOW TIMING
+===================================================== */
+
+.delete-show-btn {
+
+    border: none;
+
+    padding: 9px 13px;
+
+    border-radius: 8px;
+
+    background: #dc2626 !important;
+
+    color: #ffffff !important;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.25s;
+}
+
+
+.delete-show-btn:hover {
+
+    background: #b91c1c !important;
+
+    color: #ffffff !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   NO SHOW TIMINGS
+===================================================== */
+
+.no-show-timings {
+
+    display: block;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: #f9fafb !important;
+
+    border:
+        1px dashed #d1d5db;
+
+    border-radius: 10px;
+
+    color: #000000 !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+
+/* =====================================================
+   MOVIE LIST
+===================================================== */
+
+.admin-movie-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.admin-movie-item {
+
+    display: grid;
+
+    grid-template-columns:
+        100px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px;
+
+    background: #f9fafb;
+
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    box-sizing: border-box;
+
+    transition: 0.25s;
+}
+
+
+.admin-movie-item:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(0, 0, 0, 0.10);
+}
+
+
+/* =====================================================
+   MOVIE IMAGE
+===================================================== */
+
+.admin-movie-item img,
+.admin-no-image {
+
+    width: 100px;
+
+    height: 140px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border:
+        2px solid #e50914;
+}
+
+
+.admin-no-image {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #e5e7eb;
+
+    font-size: 35px;
+}
+
+
+/* =====================================================
+   MOVIE INFORMATION
+===================================================== */
+
+.admin-movie-info h3 {
+
+    margin: 0 0 10px;
+
+    color: #e50914 !important;
+
+    font-size: 21px;
+}
+
+
+.admin-movie-info p {
+
+    margin: 5px 0;
+
+    color: #4b5563 !important;
+
+    font-size: 14px;
+}
+
+
+.admin-movie-info strong {
+
+    color: #111827 !important;
+}
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.admin-movie-actions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.edit-movie-btn,
+.delete-movie-btn {
+
+    border: none;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    color: #ffffff !important;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.25s;
+}
+
+
+.edit-movie-btn {
+
+    background: #2563eb;
+}
+
+
+.edit-movie-btn:hover {
+
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+.delete-movie-btn {
+
+    background: #dc2626;
+}
+
+
+.delete-movie-btn:hover {
+
+    background: #b91c1c;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.admin-message {
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #6b7280 !important;
+
+    background: #f9fafb;
+
+    border-radius: 12px;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.admin-loading {
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #6b7280 !important;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   REQUIRED FIELD
+===================================================== */
+
+.form-required {
+
+    color: #e50914 !important;
+
+    margin-left: 3px;
+}
+
+
+/* =====================================================
+   SUCCESS INFORMATION
+===================================================== */
+
+.form-success-message {
+
+    margin-top: 12px;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    background: #ecfdf5;
+
+    border:
+        1px solid #a7f3d0;
+
+    color: #047857 !important;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ERROR INFORMATION
+===================================================== */
+
+.form-error-message {
+
+    margin-top: 12px;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    background: #fef2f2;
+
+    border:
+        1px solid #fecaca;
+
+    color: #b91c1c !important;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 750px) {
+
+    .admin-movies-page {
+
+        padding:
+            35px 15px 60px;
+    }
+
+
+    .admin-form-card,
+    .admin-list-card {
+
+        padding: 22px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-group.full-width {
+
+        grid-column: auto;
+    }
+
+
+    .admin-movie-item {
+
+        grid-template-columns:
+            80px minmax(0, 1fr);
+    }
+
+
+    .admin-movie-item img,
+    .admin-no-image {
+
+        width: 80px;
+
+        height: 115px;
+    }
+
+
+    .admin-movie-actions {
+
+        grid-column: 1 / -1;
+
+        flex-direction: row;
+    }
+
+
+    .edit-movie-btn,
+    .delete-movie-btn {
+
+        flex: 1;
+    }
+
+
+    .show-timing-item {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .delete-show-btn {
+
+        width: 100%;
+    }
+
+
+    .next-show-info {
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+
+    .movie-schedule {
+
+        padding: 20px;
+
+        background: #ffffff !important;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .admin-movies-page {
+
+        padding:
+            25px 10px 50px;
+    }
+
+
+    .admin-header h1 {
+
+        font-size: 28px;
+    }
+
+
+    .admin-header p {
+
+        font-size: 14px;
+    }
+
+
+    .admin-form-card,
+    .admin-list-card {
+
+        padding: 17px;
+
+        border-radius: 15px;
+    }
+
+
+    .admin-form-buttons {
+
+        flex-direction: column;
+    }
+
+
+    .add-movie-btn,
+    .cancel-edit-btn {
+
+        width: 100%;
+    }
+
+
+    .admin-movie-item {
+
+        grid-template-columns:
+            70px 1fr;
+
+        gap: 12px;
+    }
+
+
+    .admin-movie-item img,
+    .admin-no-image {
+
+        width: 70px;
+
+        height: 100px;
+    }
+
+
+    .admin-movie-info h3 {
+
+        font-size: 17px;
+    }
+
+
+    .admin-movie-info p {
+
+        font-size: 12px;
+    }
+
+
+    .admin-movie-actions {
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+    }
+
+
+    .show-timing-item {
+
+        padding: 12px;
+
+        background: #ffffff !important;
+    }
+
+
+    .show-timing-details {
+
+        font-size: 13px;
+
+        color: #000000 !important;
+    }
+
+
+    .show-timing-details span {
+
+        font-size: 13px;
+
+        color: #000000 !important;
+    }
+
+
+    .movie-schedule {
+
+        padding: 17px;
+
+        background: #ffffff !important;
+    }
+
+
+    .movie-schedule h3 {
+
+        font-size: 18px;
+
+        color: #000000 !important;
+    }
+
+
+    .movie-schedule > p {
+
+        font-size: 13px;
+
+        color: #000000 !important;
+    }
+
+
+    .next-show-info {
+
+        padding: 10px 12px;
+
+        font-size: 13px;
+    }
+
+
+    .next-show-time {
+
+        font-size: 12px;
+
+        padding: 4px 8px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .admin-form-card,
+    .admin-list-card {
+
+        padding: 14px;
+    }
+
+
+    .admin-header h1 {
+
+        font-size: 24px;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+
+        font-size: 14px;
+
+        padding: 10px 12px;
+    }
+
+
+    .admin-movie-item {
+
+        grid-template-columns:
+            60px 1fr;
+    }
+
+
+    .admin-movie-item img,
+    .admin-no-image {
+
+        width: 60px;
+
+        height: 90px;
+    }
+
+
+    .next-show-info {
+
+        display: block;
+
+        line-height: 1.7;
+    }
+
+
+    .next-show-time {
+
+        margin-left: 0;
+
+        margin-top: 4px;
+    }
+
+
+    .movie-schedule {
+
+        padding: 14px;
+
+        background: #ffffff !important;
+
+        color: #000000 !important;
+    }
+
+
+    .movie-schedule h3 {
+
+        color: #000000 !important;
+
+        font-size: 17px;
+    }
+
+
+    .movie-schedule > p {
+
+        color: #000000 !important;
+
+        font-size: 12px;
+    }
+
+
+    .show-timing-details {
+
+        color: #000000 !important;
+    }
+
+
+    .show-timing-details strong {
+
+        color: #000000 !important;
+    }
+
+
+    .show-timing-details span {
+
+        color: #000000 !important;
+    }
+
+}
+
+
+/* =====================================================
+   FINAL VISIBILITY PROTECTION
+===================================================== */
+
+.movie-schedule {
+
+    display: block !important;
+
+    position: relative !important;
+
+    z-index: 999 !important;
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    color: #000000 !important;
+
+    background-color: #ffffff !important;
+}
+
+
+.movie-schedule h3,
+.movie-schedule p,
+.movie-schedule span,
+.movie-schedule strong,
+.movie-schedule div {
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    color: #000000 !important;
+}
+
+
+/* =====================================================
+   SHOW TIMING FINAL PROTECTION
+===================================================== */
+
+.show-timing-list,
+.show-timing-item,
+.show-timing-details {
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    color: #000000 !important;
+}
+
+
+.show-timing-details span,
+.show-timing-details strong {
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    color: #000000 !important;
+}
+
+
+/* =====================================================
+   BUTTON TEXT
+===================================================== */
+
+.delete-show-btn,
+.edit-movie-btn,
+.delete-movie-btn {
+
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   MOBILE ADMIN HEADER
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .admin-header {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        text-align: center;
+    }
+
+
+    .admin-logout-btn {
+
+        width: 100%;
+    }
+
+}

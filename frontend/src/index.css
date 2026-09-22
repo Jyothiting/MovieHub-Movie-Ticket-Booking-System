@@ -1,0 +1,150 @@
+/* ================================
+   INDEX GLOBAL CSS
+================================ */
+
+
+:root {
+
+    font-family:"Poppins", Arial, sans-serif;
+
+    line-height:1.5;
+
+    font-weight:400;
+
+    color:white;
+
+    background:#0f0f0f;
+
+    font-synthesis:none;
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+
+
+
+
+* {
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+
+
+html {
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+
+
+body {
+
+    min-width:320px;
+
+    min-height:100vh;
+
+    background:#0f0f0f;
+
+}
+
+
+
+
+
+#root {
+
+    width:100%;
+
+    min-height:100vh;
+
+}
+
+
+
+
+
+a {
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+
+
+
+button,
+
+input {
+
+    font-family:inherit;
+
+}
+
+
+
+
+
+button {
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+img {
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+
+
+
+
+/* Remove default input styles */
+
+
+input:focus {
+
+    outline:none;
+
+}
+
+
+
+
+
+/* Selection Color */
+
+
+::selection {
+
+    background:#e50914;
+
+    color:white;
+
+}
